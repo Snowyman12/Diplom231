@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Car</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link href="{% static 'css/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+
+<body id="top">
+
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('{% static 'img/demo/backgrounds/delorian7.jpg' %}');"> 
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <div id="logo" class="fl_left">
+        <h1  style="color:Green"><a href="{% url 'index' %}  ">Exit</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a  style="color: Red" href="{% url 'index' %}">Home</a></li>
+          <li><a  style="color: Yellow " href="{% url 'random' %}"> Car</a>
+          <li><a  style="color: Blue" class="active" href="{% url 'many' %}">list</a>
+          <li><a  style="color: Orange" href="https://github.com/Snowyman12/102.git">Github</a></li>
+          <li><a style="color: Purple" href="https://autonews.autoua.net/" >AutoNews Ukraine</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+<div style="display:inline;text-align:center;align-content:center;" class="form-group">
+    <li><a  style="color: Yellow " href="{% url 'random' %}"> Car</a>
+    
+</div>
+    <div id="quote_container" class="container text-center">
+    {% block content %}
+    {% endblock content %}
+</div>
+
+
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+  <!-- JAVASCRIPTS -->
+  <script src="{% static 'scripts/jquery.min.js' %}"></script>
+  <script src="{% static 'scripts/jquery.backtotop.js' %}"></script>
+  <script src="{% static 'scripts/jquery.mobilemenu.js' %}"></script>
+  </body>
+  </html>
+</body>
+</html>
